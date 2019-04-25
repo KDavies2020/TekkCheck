@@ -25,14 +25,14 @@ export default class App extends React.Component {
 />
 
        <View style={styles.topBox}>
-      <Button color='#bbb'
+      <Button color='#bbb' 
   onPress={() => {
     Alert.alert('You tapped the button!');
   }}
   title="Start Your Subscription"
 />
 </View>
-<View style={styles.boxes}>
+<View style={styles.secondBox}>
 <Button 
   onPress={() => {
     Alert.alert('You tapped the button!');
@@ -40,12 +40,12 @@ export default class App extends React.Component {
   title="Join Challenge"
 />
 </View>
-<View style={styles.topBox}>
+<View style={styles.boxes}>
       <Text>Training Sock Level</Text>
-      <Text>Training Streak</Text>
+      <Text style={{marginLeft: 78}}>Training Streak</Text>
 </View>
-<View style={styles.topBox}>
-      <Text>Total Time Trained</Text>
+<View style={styles.bottomBox}>
+      <Text style={{alignSelf: 'center'}}>Total Time Trained</Text>
 </View>
 
       </View>
@@ -62,34 +62,46 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  input: {
-    height: 40,
-    minWidth: 50,
-    borderColor: 'gray',
-    borderWidth: 1
-    },
     header: {
-      marginTop: -400,
+      marginTop: -300,
       height: 60,
       backgroundColor: "green"
 
     },
     //are these two identical? If so - remove one.
     topBox: {
+      marginTop: 50,
       height: 50,
-      width: 350,
-      borderBottomWidth: 2,
+      width: 300,
+      borderBottomWidth: .5,
       borderTopColor: '#bbb',
       borderBottomColor: '#bbb',
-      marginTop:5,
+      
+    },
+    secondBox: {
+      height: 50,
+      width: 300,
+      borderBottomWidth: .5,
+      borderTopColor: '#bbb',
+      borderBottomColor: '#bbb',
+      marginTop:3,
     },
     boxes: {
       height: 50,
-      width: 350,
-      borderBottomWidth: 2,
+      width: 300,
+      flexDirection: 'row',
+      borderBottomWidth: .5,
       borderTopColor: '#bbb',
       borderBottomColor: '#bbb',
-      marginTop:5,
+      marginTop:3,
+    },
+    bottomBox: {
+      height: 50,
+      width: 300,
+      borderBottomWidth: .5,
+      borderTopColor: '#bbb',
+      borderBottomColor: '#bbb',
+      marginTop:3,
     }
     
 });
